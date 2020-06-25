@@ -1,4 +1,4 @@
 'use strict';
 
-const PlugwiseAdamApp = require('./lib/PlugwiseAdamApp');
-module.exports = PlugwiseAdamApp;
+const PlugwiseApp = require('./lib/PlugwiseApp');
+module.exports = PlugwiseApp;

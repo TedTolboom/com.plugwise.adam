@@ -9,7 +9,6 @@ module.exports = class PlugwiseAdamZoneDevice extends PlugwiseAdamDevice {
     super.onInit(...props);
 
     this.registerCapabilityListener('location_preset', this.onCapabilityLocationPreset.bind(this));
-
     this.registerCapabilityListener('target_temperature', this.onCapabilityTargetTemperature.bind(this));
   }
 

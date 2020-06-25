@@ -1,6 +1,6 @@
 {
   "id": "com.plugwise.adam",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "compatibility": ">=2.5.0",
   "brandColor": "#3CA2D7",
   "sdk": 2,
@@ -8,7 +8,8 @@
     "en": "Plugwise"
   },
   "description": {
-    "en": "Adds support for Plugwise devices"
+    "en": "Zone control for the ideal temperature per room",
+    "nl": "Zone-regeling voor de ideale temperatuur per ruimte"
   },
   "category": [
     "climate"

@@ -1,6 +1,6 @@
 {
   "id": "com.plugwise.adam",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "compatibility": ">=2.5.0",
   "brandColor": "#3CA2D7",
   "sdk": 2,
@@ -29,6 +29,5 @@
         "name": "Ted Tolboom"
       }
     ]
-  },
-  "homeyCommunityTopicId": 8828
+  }
 }

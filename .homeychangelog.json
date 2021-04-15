@@ -1,5 +1,8 @@
 {
   "2.2.1": {
     "en": "Fixed an issue where some devices could not be found."
+  },
+  "2.4.0": {
+    "en": "Fixed a bug where Smile V3 (P1) could not be added."
   }
 }

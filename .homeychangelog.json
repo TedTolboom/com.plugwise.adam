@@ -4,5 +4,8 @@
   },
   "2.4.0": {
     "en": "Fixed a bug where Smile V3 (P1) could not be added."
+  },
+  "2.5.0": {
+    "en": "Many improvements."
   }
 }

@@ -1,11 +1,11 @@
 'use strict';
 
-const Homey = require('homey');
 const PlugwiseDevice = require('../../lib/PlugwiseDevice');
 
 module.exports = class PlugwiseSmileP1Device extends PlugwiseDevice {
 	
 	onPoll({ payload }) {
+    // console.log(JSON.stringify(payload, false, 2));
   	super.onPoll({ payload });
   	
   	if(!payload) return;  	
@@ -44,6 +44,11 @@ module.exports = class PlugwiseSmileP1Device extends PlugwiseDevice {
          this.setCapabilityValue('meter_power', value).catch(this.error);
        }
     }
+
+    // TODO: Add Electricity Produced
+
+    // TODO: Add Gas
+
 	}
 	
 }

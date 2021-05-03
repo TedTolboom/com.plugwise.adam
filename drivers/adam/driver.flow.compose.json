@@ -8,6 +8,10 @@
         "en": "Set domestic hot water mode",
         "nl": "Verander de tapwater comfort modus"
       },
+      "titleFormatted": {
+        "en": "Set domestic hot water mode to [[mode]]",
+        "nl": "Verander de tapwater comfort modus naar [[mode]]"
+      },
       "args": [
         {
           "name": "mode",

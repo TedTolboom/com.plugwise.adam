@@ -17,7 +17,6 @@ discovery.discover({
     const appliance = appliances.find(appliance => {
       return appliance.type === 'zone_thermostat';
     });
-    console.log('appliance', appliance)
     
     await device.setThermostat({
       applianceId: appliance.$attr.id,

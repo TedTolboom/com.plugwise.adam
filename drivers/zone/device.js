@@ -15,39 +15,41 @@ module.exports = class PlugwiseAdamZoneDevice extends PlugwiseAdamDevice {
   onPoll({ location }) {
     //console.log(JSON.stringify(appliance.logs, false, 2));
 
-    this.setCapabilityValue('location_preset', location.preset || null).catch(this.error);
+    if( location ) {
+      this.setCapabilityValue('location_preset', location.preset || null).catch(this.error);
 
-    if( location.actuator_functionalities
-     && location.actuator_functionalities.thermostat_functionality ) {
-      const { setpoint } = location.actuator_functionalities.thermostat_functionality;
-      const value = parseFloat(setpoint);
-      this.setCapabilityValue('target_temperature', value).catch(this.error);
-    }
+      if( location.actuator_functionalities
+      && location.actuator_functionalities.thermostat_functionality ) {
+        const { setpoint } = location.actuator_functionalities.thermostat_functionality;
+        const value = parseFloat(setpoint);
+        this.setCapabilityValue('target_temperature', value).catch(this.error);
+      }
 
-    if( location.logs
-     && Array.isArray(location.logs.point_log) ) {
-       location.logs.point_log.forEach(log => {
-         if( log.type === 'temperature'
-          && log.unit === 'C'
-          && log.period
-          && log.period.measurement ) {
-           const value = parseFloat(log.period.measurement.$text);
-           this.setCapabilityValue('measure_temperature', value).catch(this.error);
-         }
-       });
-    }
+      if( location.logs
+      && Array.isArray(location.logs.point_log) ) {
+        location.logs.point_log.forEach(log => {
+          if( log.type === 'temperature'
+            && log.unit === 'C'
+            && log.period
+            && log.period.measurement ) {
+            const value = parseFloat(log.period.measurement.$text);
+            this.setCapabilityValue('measure_temperature', value).catch(this.error);
+          }
+        });
+      }
 
-    if( location.logs
-     && Array.isArray(location.logs.point_log) ) {
-       location.logs.point_log.forEach(log => {
-         if( log.type === 'electricity_consumed'
-          && log.unit === 'W'
-          && log.period
-          && log.period.measurement ) {
-           const value = parseFloat(log.period.measurement.$text);
-           this.setCapabilityValue('measure_power', value).catch(this.error);
-         }
-       });
+      if( location.logs
+      && Array.isArray(location.logs.point_log) ) {
+        location.logs.point_log.forEach(log => {
+          if( log.type === 'electricity_consumed'
+            && log.unit === 'W'
+            && log.period
+            && log.period.measurement ) {
+            const value = parseFloat(log.period.measurement.$text);
+            this.setCapabilityValue('measure_power', value).catch(this.error);
+          }
+        });
+      }
     }
   }
 

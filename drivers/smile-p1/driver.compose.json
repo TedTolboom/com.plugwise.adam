@@ -6,7 +6,8 @@
   "class": "sensor",
   "capabilities": [
     "measure_power",
-    "meter_power"
+    "meter_power",
+    "meter_gas"
   ],
   "energy": {
     "cumulative": true

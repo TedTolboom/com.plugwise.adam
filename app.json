@@ -39,6 +39,10 @@
           "en": "Set domestic hot water mode",
           "nl": "Verander de tapwater comfort modus"
         },
+        "titleFormatted": {
+          "en": "Set domestic hot water mode to [[mode]]",
+          "nl": "Verander de tapwater comfort modus naar [[mode]]"
+        },
         "args": [
           {
             "type": "device",
@@ -222,6 +226,61 @@
     },
     {
       "images": {
+        "large": "/drivers/jip/assets/images/large.png",
+        "small": "/drivers/jip/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "loading"
+          }
+        },
+        {
+          "id": "loading",
+          "template": "loading"
+        },
+        {
+          "id": "pincode",
+          "template": "pincode",
+          "options": {
+            "type": "text",
+            "length": 8,
+            "title": {
+              "en": "Enter password"
+            },
+            "hint": {
+              "en": "Enter the password. You can find this on the back of the device."
+            }
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "name": {
+        "en": "Jip"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_temperature"
+      ],
+      "id": "jip"
+    },
+    {
+      "images": {
         "large": "/drivers/lisa/assets/images/large.png",
         "small": "/drivers/lisa/assets/images/small.png"
       },
@@ -401,7 +460,8 @@
       "class": "sensor",
       "capabilities": [
         "measure_power",
-        "meter_power"
+        "meter_power",
+        "meter_gas"
       ],
       "energy": {
         "cumulative": true

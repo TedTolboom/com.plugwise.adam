@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "fast-xml-parser": "^3.12.12",
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "eslint": "^7.25.0",

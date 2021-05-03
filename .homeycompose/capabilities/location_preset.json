@@ -1,6 +1,6 @@
 {
   "title": {
-    "en": "Preset"
+    "en": "Scene"
   },
   "uiComponent": "picker",
   "getable": true,

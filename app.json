@@ -70,6 +70,65 @@
             ]
           }
         ]
+      },
+      {
+        "id": "set_preset",
+        "title": {
+          "en": "Set the scene",
+          "nl": "Zet de scene"
+        },
+        "titleFormatted": {
+          "en": "Set the scene to [[preset]]",
+          "nl": "Zet de scene naar [[preset]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=zone"
+          },
+          {
+            "type": "dropdown",
+            "name": "preset",
+            "values": [
+              {
+                "id": "home",
+                "title": {
+                  "en": "Home",
+                  "nl": "Thuis"
+                }
+              },
+              {
+                "id": "away",
+                "title": {
+                  "en": "Away",
+                  "nl": "Weg"
+                }
+              },
+              {
+                "id": "asleep",
+                "title": {
+                  "en": "Night",
+                  "nl": "Nacht"
+                }
+              },
+              {
+                "id": "vacation",
+                "title": {
+                  "en": "Vacation",
+                  "nl": "Vakantie"
+                }
+              },
+              {
+                "id": "no_frost",
+                "title": {
+                  "en": "Frost protection",
+                  "nl": "Anti-vries"
+                }
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -706,7 +765,7 @@
     },
     "location_preset": {
       "title": {
-        "en": "Preset"
+        "en": "Scene"
       },
       "uiComponent": "picker",
       "getable": true,

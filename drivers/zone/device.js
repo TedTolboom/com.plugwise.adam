@@ -53,9 +53,7 @@ module.exports = class PlugwiseAdamZoneDevice extends PlugwiseAdamDevice {
   }
 
   async onCapabilityLocationPreset(value) {
-    const { locationId } = this;
-    const preset = value;
-    return this.bridge.setPreset({ locationId, preset });
+    await this.setPreset(value);
   }
 
   async onCapabilityTargetTemperature(value) {
@@ -75,6 +73,11 @@ module.exports = class PlugwiseAdamZoneDevice extends PlugwiseAdamDevice {
     }
 
     throw new Error('Unknown Error');
+  }
+
+  async setPreset(preset) {
+    const { locationId } = this;
+    return this.bridge.setPreset({ locationId, preset });
   }
 
 };

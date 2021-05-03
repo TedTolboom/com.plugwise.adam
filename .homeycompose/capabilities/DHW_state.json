@@ -5,15 +5,15 @@
     "nl": "Tap water toestand"
   },
   "label": {
-		"true": {
-			"en": "Active",
+    "true": {
+      "en": "Active",
       "nl": "Actief"
-		},
-		"false": {
-			"en": "Idle",
+    },
+    "false": {
+      "en": "Idle",
       "nl": "Uit"
-		}
-	},
+    }
+  },
   "getable": true,
   "setable": false,
   "insights": true,

@@ -12,7 +12,7 @@ module.exports = class PlugwiseAdamZoneDevice extends PlugwiseAdamDevice {
   }
 
   onPoll({ location }) {
-    // console.log(JSON.stringify(appliance.logs, false, 2));
+    // console.log(JSON.stringify(location, false, 2));
 
     if (location) {
       this.setCapabilityValue('location_preset', location.preset || null).catch(this.error);

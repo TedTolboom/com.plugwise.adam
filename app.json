@@ -581,6 +581,14 @@
         "meter_power",
         "meter_gas"
       ],
+      "capabilitiesOptions": {
+        "meter_power.produced": {
+          "title": {
+            "en": "Energy produced",
+            "nl": "Energie opgewekt"
+          }
+        }
+      },
       "energy": {
         "cumulative": true
       },

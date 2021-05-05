@@ -7,6 +7,7 @@
   "capabilities": [
     "target_temperature",
     "measure_temperature",
+    "measure_luminance",
     "location_preset"
   ],
   "capabilitiesOptions": {

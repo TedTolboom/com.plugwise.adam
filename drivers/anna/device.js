@@ -49,7 +49,7 @@ module.exports = class PlugwiseAnnaDevice extends PlugwiseThermostatDevice {
      && Array.isArray(appliance.logs.point_log)) {
       appliance.logs.point_log.forEach(log => {
         if (log.type === 'illuminance'
-         && log.unit === 'unit'
+         && log.unit === 'lx'
          && log.period
          && log.period.measurement) {
           const value = parseFloat(log.period.measurement.$text);

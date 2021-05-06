@@ -10,5 +10,8 @@
   },
   "2.6.0": {
     "en": "Added lux for anna, Gas for P1"
+  },
+  "2.6.1": {
+    "en": "Fixed a bug where Anna's temperature & lux would not sync."
   }
 }
